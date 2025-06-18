@@ -2,37 +2,61 @@ package spring.basics.core.order;
 
 public class Order {
 
-    private Long id;
-    private String name;
-    private Double price;
+    private Long memberId;
+    private String itemName;
+    private Integer itemPrice;
+    private Integer discountPrice;
 
-    public Order(Long id, String name, Double price) {
-        this.id = id;
-        this.name = name;
-        this.price = price;
+    public Order(Long memberId, String itemName, Integer itemPrice, Integer discountPrice) {
+        this.memberId = memberId;
+        this.itemName = itemName;
+        this.itemPrice = itemPrice;
+        this.discountPrice = discountPrice;
     }
 
-    public Long getId() {
-        return id;
+    public int calculatePrice(){
+        return itemPrice-discountPrice;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public Long getMemberId() {
+        return memberId;
     }
 
-    public String getName() {
-        return name;
+    public void setMemberId(Long memberId) {
+        this.memberId = memberId;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public String getItemName() {
+        return itemName;
     }
 
-    public Double getPrice() {
-        return price;
+    public void setItemName(String itemName) {
+        this.itemName = itemName;
     }
 
-    public void setPrice(Double price) {
-        this.price = price;
+    public Integer getItemPrice() {
+        return itemPrice;
+    }
+
+    public void setItemPrice(Integer itemPrice) {
+        this.itemPrice = itemPrice;
+    }
+
+    public Integer getDiscountPrice() {
+        return discountPrice;
+    }
+
+    public void setDiscountPrice(Integer discountPrice) {
+        this.discountPrice = discountPrice;
+    }
+
+    @Override
+    public String toString() {
+        return "Order{" +
+                "memberId=" + memberId +
+                ", itemName='" + itemName + '\'' +
+                ", itemPrice=" + itemPrice +
+                ", discountPrice=" + discountPrice +
+                '}';
     }
 }

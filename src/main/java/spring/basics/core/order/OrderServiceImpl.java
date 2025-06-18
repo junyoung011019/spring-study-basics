@@ -1,6 +1,7 @@
 package spring.basics.core.order;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import spring.basics.core.discount.DiscountPolicy;
+import spring.basics.core.discount.FixDiscountPolicy;
 import spring.basics.core.member.*;
 
 import java.util.HashMap;
@@ -8,34 +9,17 @@ import java.util.Map;
 
 public class OrderServiceImpl implements OrderService{
 
-    MemberService memberService = new MemberServiceImpl();
-
-    // 정가 할인(1000원)
-    DiscountPolicy fixDiscount = new FixDiscountPolicy();
-
-    // 정률 할인(10%)
-    // DiscountPolicy rateDiscount = new RateDiscountPolicy();
-
-    Map<Long, Order> store = new HashMap<>();
+    private final MemberRepository memberRepository = new MemoryMemberRepository();
+    private final DiscountPolicy discountPolicy = new FixDiscountPolicy();
 
     @Override
-    public void create(Order order) {
-        store.put(order.getId(), order);
+    public Order createOrder(Long memberId, String itemName, int itemPrice) {
+        Member member = memberRepository.findById(memberId);
+        int discountPrice = discountPolicy.discount(member, itemPrice);
+
+        return new Order(memberId, itemName, itemPrice, discountPrice);
     }
 
-    @Override
-    public Member findMember(Long memberId) {
-        return memberService.findMember(memberId);
-    }
 
-    @Override
-    public Order discount(Order order) {
-        return fixDiscount.discount(order);
-    }
-
-    @Override
-    public Order send(Member member) {
-        return store.get(member.getId());
-    }
 
 }
