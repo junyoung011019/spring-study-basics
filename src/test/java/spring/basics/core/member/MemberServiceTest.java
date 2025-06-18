@@ -5,13 +5,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-class MemberServiceImplTest {
+class MemberServiceTest {
 
     @Autowired
     MemberServiceImpl memberService = new MemberServiceImpl();
-
-    @Autowired
-    MemberRepository memberRepository = new MemoryMemberRepository();
 
     @Test
     void 회원가입() {
@@ -20,14 +17,14 @@ class MemberServiceImplTest {
 
         //when
         memberService.join(member1);
+        Member findMember = memberService.findMember(member1.getId());
 
         //then
-        Member findMember = memberService.findMember(member1.getId());
         assertThat(findMember).isEqualTo(member1);
     }
 
     @Test
-    void 회원_조회() {
+    void 회원조회() {
         //given
         Member member1 = new Member(1L, "홍길동1",Grade.BASIC);
         memberService.join(member1);
