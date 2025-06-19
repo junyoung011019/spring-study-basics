@@ -1,14 +1,21 @@
 package spring.basics.core.member;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import spring.basics.core.AppConfig;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 class MemberServiceTest {
 
-    @Autowired
-    MemberServiceImpl memberService = new MemberServiceImpl();
+    MemberService memberService;
+
+    @BeforeEach
+    public void beforeEach(){
+        AppConfig appConfig = new AppConfig();
+        memberService = appConfig.memberService();
+    }
 
     @Test
     void 회원가입() {
