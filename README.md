@@ -179,7 +179,11 @@ AppConfig 역시 새로 생성되는 객체의 생성자를 밖으로 빼서 주
 
 #### 📌 핵심 요약
 
--
+- 객체지향 특성 3가지 중점
+
+- IoC와 DI
+
+- 스프링 컨테이너와 Bean 등록
 
 <details>
 <summary> 학습 필기 내용 </summary>
@@ -223,7 +227,20 @@ AppConfig 상단 <br>
 ApplicationContext(스프링 컨테이너) applicationContext = new AnnotationConfigApplicationContext(AppConfig.class); -> 스프링 설정 관리 <br>
 MemberService memberService = applicationContext.getBean("memberService", MemberService.class); -> 스프링 컨테이너에서 메서드 명, 반환 타입 검색
 
+#### 파트 : 26
+
+스프링 컨테이너 - 빈 작동 원리
+
+1.  스프링 컨테이너 생성 (빈 저장소 이름- 주로 메소드명 / 객체)
+
+2.  AppConfig에 @Bean 등록 되있는거 컨테이너에 저장
+
+3. 객체 간 의존 관계 설정 (DI)
+
+
 <br><br><br><br><br><br>
+
+
 
 
 ### 2025년 월 일 (파트  ~ 파트 )
