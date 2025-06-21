@@ -175,7 +175,53 @@ AppConfig 역시 새로 생성되는 객체의 생성자를 밖으로 빼서 주
 //SAA 자격증 준비로 많이 하지 못했다
 
 
+### 2025년 6월 21일 (파트 22 ~ 파트 )
 
+#### 📌 핵심 요약
+
+-
+
+<details>
+<summary> 학습 필기 내용 </summary>
+
+#### 파트 : 23
+
+현재 코드 리팩토링을 통해 객체지향 특성 3가지 중점으로 지킴
+
+1. SRP 단일 책임 원칙
+
+   한 클래스는 하나의 책임만  (클래스 내부에서 객체 생성 및 기능 -> 분리)
+
+2. DIP 의존관계 역전
+
+   새로운 기능 추가시, 클라이언트 코드 수정 X (새로운 기능 추가시 객체 주입 코드 수정)
+
+3. OCP 개방폐쇄 원칙
+
+   확장에는 열려있고, 변경에는 닫혀있음 (외부 - AppConfig에서만 변경해주면 됨)
+
+#### 파트 : 24
+
+IoC, 제어의 역전 -> 프로그램 제어 흐름을 외부 관리 <br>
+(전) 클래스 내부에서 직접 객체 생성, 주입 (후) AppConfig 제어 흐름 관리 <br>
+
+프레임워크 vs 라이브러리 <br>
+프로그램 제어 흐름(호출)을 누가 담당하는지 <br>
+
+DI, 의존관계주입 <br>
+정적 클래스 의존 관계 -> 코드를 실행하지 않아도 의존 관계 판단 가능 <br>
+동적 클래스 의존 관계 -> AppConfig와 같이 외부에서 주입되는 경우 실행 해봐야함(DI - Dependency Injection) <br>
+
+IoC 컨테이너(DI 컨테이너)
+
+#### 파트 : 25
+
+AppConfig 상단 <br>
+@Configuration -> 구성 정보에서 @Bean으로 등록된 메서드를 스프링 컨테이너에 빈으로 등록 <br>
+
+클래스 내부에서 Appconfig 객체 생성 대신 -> <br>
+ApplicationContext(스프링 컨테이너) applicationContext = new AnnotationConfigApplicationContext(AppConfig.class); -> 스프링 설정 관리 <br>
+MemberService memberService = applicationContext.getBean("memberService", MemberService.class); -> 스프링 컨테이너에서 메서드 명, 반환 타입 검색
 
 <br><br><br><br><br><br>
 
