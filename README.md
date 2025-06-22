@@ -175,7 +175,7 @@ AppConfig 역시 새로 생성되는 객체의 생성자를 밖으로 빼서 주
 //SAA 자격증 준비로 많이 하지 못했다
 
 
-### 2025년 6월 21일 (파트 22 ~ 파트 )
+### 2025년 6월 21일 (파트 22 ~ 파트 26)
 
 #### 📌 핵심 요약
 
@@ -236,6 +236,33 @@ MemberService memberService = applicationContext.getBean("memberService", Member
 2.  AppConfig에 @Bean 등록 되있는거 컨테이너에 저장
 
 3. 객체 간 의존 관계 설정 (DI)
+
+</details>
+
+
+### 2025년 6월 22일 (파트 27 ~ 파트 29)
+
+#### 📌 핵심 요약
+
+- 등록된 빈 확인
+
+- 빈 목록을 테스트
+
+<details>
+<summary> 학습 필기 내용 </summary>
+
+#### 파트 : 27
+
+iter 배열, 문자열 반복
+
+Test 코드에서 스프링 빈 조회 가능
+
+#### 파트 : 28
+
+assertThrow를 통해 에러가 터지는지 확인 가능 (어떤 Exception인지 작성)
+
+
+</details>
 
 
 <br><br><br><br><br><br>
