@@ -264,6 +264,20 @@ assertThrow를 통해 에러가 터지는지 확인 가능 (어떤 Exception인�
 
 </details>
 
+### 2025년 6월 25일 (파트 30~ 파트 )
+
+#### 📌 핵심 요약
+
+-
+
+<details>
+<summary> 학습 필기 내용 </summary>
+
+#### 파트 : 
+
+부모 타입 빈 조회시 자식 타입 함께 조회
+
+
 
 <br><br><br><br><br><br>
 
