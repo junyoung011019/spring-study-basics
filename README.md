@@ -284,7 +284,7 @@ assertThrow를 통해 에러가 터지는지 확인 가능 (어떤 Exception인�
 
 ### 2025년 6월 26일 - 처음부터 다시 코딩하며 복습
 
-
+[복습용 레포](https://github.com/junyoung011019/spring-basic-review)
 
 
 <br><br><br><br><br><br>
