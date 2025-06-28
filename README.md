@@ -264,7 +264,7 @@ assertThrow를 통해 에러가 터지는지 확인 가능 (어떤 Exception인�
 
 </details>
 
-### 2025년 6월 25일 (파트 30~ 파트 30)
+### 2025년 6월 25일 (파트 30)
 
 #### 📌 핵심 요약
 
@@ -282,9 +282,42 @@ assertThrow를 통해 에러가 터지는지 확인 가능 (어떤 Exception인�
 내일부터는 처음부터 다시 코딩 해보기
 
 
-### 2025년 6월 26일 - 처음부터 다시 코딩하며 복습
+### 2025년 6월 26일 ~ 27일 (파트 1 ~ 파트 30)
+
+- 처음부터 다시 코딩하며 복습 완료
 
 [복습용 레포](https://github.com/junyoung011019/spring-basic-review)
+
+### 2025년 6월 28일 (파트 31 ~ 파트 )
+
+#### 📌 핵심 요약
+
+- 스프링 컨테이너 (BeanFactory, ApplicationContext)
+
+- 그중 최상위 인터페이스 : BeanFactory
+
+- 하위의 다양한 부가 기능을 상속 받음 : ApplicationContext
+
+- xml로 config 작성하기
+
+<details>
+<summary> 학습 필기 내용 </summary>
+
+#### 파트 : 31
+
+BeanFactory는 최상위 인터페이스, 스프링 관리 및 조회 <br> 
+
+ApplicationContext는 여러 부가기능 (BeanFactory 포함) 상속받음 <br>
+· MessageSource : 한국에서 한국어, 미국에선 영어 <br>
+· EnvironmentCapable : 로컬 개발환경, 테스트 서버, 운영 서버, (스테이징 환경 - 운영과 가장 밀접한 환경) 환경 별 환경변수 처리 <br>
+· ApplicationEventPublisher : 이벤트 발행 및 구독 <br>
+· ResourceLoader : 외부 리소스 읽어와서 추상화 <br>
+
+#### 파트 : 32
+
+AppConfig와 동일하게 xml로 config 등록하면 됨
+
+</details>
 
 
 <br><br><br><br><br><br>
