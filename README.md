@@ -288,7 +288,7 @@ assertThrow를 통해 에러가 터지는지 확인 가능 (어떤 Exception인�
 
 [복습용 레포](https://github.com/junyoung011019/spring-basic-review)
 
-### 2025년 6월 28일 (파트 31 ~ 파트 )
+### 2025년 6월 28일 (파트 31 ~ 파트 32)
 
 #### 📌 핵심 요약
 
@@ -316,6 +316,19 @@ ApplicationContext는 여러 부가기능 (BeanFactory 포함) 상속받음 <br>
 #### 파트 : 32
 
 AppConfig와 동일하게 xml로 config 등록하면 됨
+
+</details>
+
+### 2025년 6월 29일 (파트 33  ~ 파트 )
+
+#### 📌 핵심 요약
+
+-
+
+<details>
+<summary> 학습 필기 내용 </summary>
+
+#### 파트 :
 
 </details>
 
