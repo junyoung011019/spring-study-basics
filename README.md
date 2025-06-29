@@ -323,12 +323,31 @@ AppConfig와 동일하게 xml로 config 등록하면 됨
 
 #### 📌 핵심 요약
 
--
+- BeanDefinition에서 스프링 정보를 추상화해서 빈이 생성됨
+
+- 현재 요청시마다 config 객체 생성됨
+
+- 싱글톤으로 객체 하나만 생성하고, 공유하도록 설계 변경
 
 <details>
 <summary> 학습 필기 내용 </summary>
 
-#### 파트 :
+#### 파트 : 33 
+
+스프링 컨테이너 -> BeanDefinition (스프링 정보 추상화) -> AppConfig, appConfig
+
+- beanDefinition <br>
+
+scope=; 싱글톤 <br>
+autowireMode 자동 주입 <br>
+메타정보 기반으로 빈이 생성 <br>
+
+### 파트 : 34
+
+현재 문제점 : 여러번 요청시 config가 불필요하게 여러개 생성됨 <br>
+
+싱글톤으로 객체를 하나만 생성하고, 공유하게 설계
+
 
 </details>
 
