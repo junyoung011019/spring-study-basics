@@ -351,6 +351,30 @@ autowireMode 자동 주입 <br>
 
 </details>
 
+### 2025년 6월 30일 (파트 35)
+
+#### 📌 핵심 요약
+
+- 싱글톤 패턴 구성 방법
+
+- 싱글톤 패턴의 단점
+
+<details>
+<summary> 학습 필기 내용 </summary>
+
+#### 파트 : 35
+
+private static final SingletonService instance = new SingletonService();으로 <br>
+static -> JVM 로딩시 한 번만 실행 <br>
+fianl -> 외부 접근 막음 <br>
+
+
+싱글톤 패턴을 만들지 않아도, 스프링에서 자동으로 관리
+
+DIP 위반, OCP 위반, 유연성 떨어짐
+
+</details>
+
 
 <br><br><br><br><br><br>
 
