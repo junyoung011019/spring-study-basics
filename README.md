@@ -408,6 +408,51 @@ AppConfig에서 다른 인스턴스 생성이 여러번 호출해도, 하나만 
 
 </details>
 
+### 2025년 7월 2일 (파트 39  ~ 파트 41)
+
+#### 📌 핵심 요약
+
+- AppConfig를 상속 받는 CGLIB에서, 빈 존재 여부에 따라 생성 or 존재하는 빈 리턴 해줌
+
+- 다양한 스프링 어노테이션은 컴포넌트를 내장한다.
+
+- 컴포넌트 스캔을 통해, 컴포넌트를 자동으로 스프링 컨테이너에 저장한다.
+
+<details>
+<summary> 학습 필기 내용 </summary>
+
+#### 파트 : 39
+AppConfig를 상속받는 AppConfig@CGLIB를 생성 <br>
+(바이트 코드 조작) <br>
+-> 이미 빈이 있으면 존재하는 빈 리턴, 없으면 새로 생성
+
+@Configuration을 지우면, <br>
+싱글톤 안됨. AppConfig를 바로 가져옴
+
+#### 파트 : 40
+
+Autowired, 컴포넌트 스캔 수행 과정
+
+1. @ComponentScan이 @Component가 붙은 모든 클래스를 스프링 빈으로 등록한다 (스프링 빈 이름은 맨 앞글자만 소문자)
+
+2. 생성자에 @Autowired를 지정하면, 스프링 컨테이너가 자동으로 해당 스프링 빈을 찾아서 주입한다.
+   (타입이 같은 빈을 찾음)
+
+생성자에 매개변수가 많아도 자동으로 주입한다
+
+
+#### 파트 : 41
+
+<스프링이 지원하는 기능> <br>
+basePackages 특정 패키지 하위에서만 스캔 돌릴 수 있다 <br>
+SpringBootApplication에 컴포넌트 스캔 내장 <br>
+
+@Controller @Configuration @ Service @Repository <br>
+-> @Component 내장
+
+
+</details>
+
 
 <br><br><br><br><br><br>
 
