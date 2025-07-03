@@ -455,6 +455,19 @@ SpringBootApplication에 컴포넌트 스캔 내장 <br>
 
 </details>
 
+### 2025년 7월 3일 (파트 42 ~ 파트 )
+
+#### 📌 핵심 요약
+
+-
+
+<details>
+<summary> 학습 필기 내용 </summary>
+
+#### 파트 : 42
+
+</details>
+
 
 <br><br><br><br><br><br>
 
