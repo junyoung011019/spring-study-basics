@@ -455,16 +455,43 @@ SpringBootApplication에 컴포넌트 스캔 내장 <br>
 
 </details>
 
-### 2025년 7월 3일 (파트 42 ~ 파트 )
+### 2025년 7월 3일 (파트 42 ~ 파트 43)
 
 #### 📌 핵심 요약
 
--
+- 필터로 컴포넌트 스캔에 추가(예외)할 컴포넌트 지정 가능
+
+- 빈 이름이 중복되면, 최근엔 에러 발생
+
+- 최대한 애매한 상황 만들지 않기
 
 <details>
 <summary> 학습 필기 내용 </summary>
 
 #### 파트 : 42
+
+includeFilters - 스캔 포함 <br>
+
+excludFilters - 스캔 제외 <br>
+
+필터 타입 옵션 <br>
+1. Annotation - 기본값 <br>
+2. ASSIGNABLE_TYPE - 지정한 타입으로 조회 <br>
+   ~ <br>
+
+#### 파트 : 43
+
+자동빈 - 자동빈 이름 중복시 <br>
+ConflictingBeanDefinitionException
+
+자동빈-수동빈 이름 중복시 <br>
+수동 등록빈이 우선 등록함 <br>
+최근에는 에러 반환 <br>
+(애매한 상황을 만들지 않기)
+
+로그에 꽤 많은 정보를 전달해준다
+
+내일부터 다시 복습 시작
 
 </details>
 
